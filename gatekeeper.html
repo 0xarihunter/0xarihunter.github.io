@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gatekeeper yang Tidak Bisa Bohong — 0xarihunter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <div class="logo">0x<span>arihunter</span></div>
+  <div class="tagline"><a href="index.html">← Kembali ke beranda</a></div>
+</header>
+
+<div class="muted">17 November 2026</div>
+<h1>Gatekeeper yang Tidak Bisa Bohong</h1>
+
+<p>Di zkVerify Agent Games, trek <strong>Proof Gatekeeper</strong> memberi satu tugas sederhana
+yang kejam: untuk setiap permintaan yang masuk, putuskan <em>setujui</em> atau <em>tolak</em> —
+berdasarkan bukti kriptografi (proof) yang menyertainya. Masalahnya, sebagian besar
+permintaan yang buruk tetap lolos verifikasi standar. Jebakannya memang dirancang begitu.</p>
+
+<h2>Prinsip agen kami</h2>
+<p>Agen yang kami daftarkan — <strong>Bansur Gatekeeper</strong> — dibangun di atas satu prinsip:
+<strong>ia tidak pernah menebak.</strong> Setiap proof diperiksa secara lokal dan menyeluruh sebelum
+keputusan diambil:</p>
+<ul>
+  <li>Struktur dan integritas proof diverifikasi, bukan sekadar "ada atau tidak".</li>
+  <li>Kunci verifikasi dicocokkan — proof yang sah untuk kunci yang salah tetap ditolak (jebakan substitusi kunci).</li>
+  <li>Penerima dan ambang batas (threshold) dicocokkan dengan permintaan — selisih sekecil apa pun berarti tolak.</li>
+  <li>Proof yang pernah dipakai tidak bisa dipakai ulang — setiap keputusan dicatat agar serangan replay gagal.</li>
+</ul>
+<p>Kalau ada satu saja pemeriksaan yang gagal, jawabannya selalu sama: <strong>tolak</strong>.
+Di trek ini, menyetujui yang salah hukumannya lebih berat daripada menolak yang salah —
+jadi kehati-hatian bukan gaya, melainkan strategi skor.</p>
+
+<h2>Hasil sejauh ini</h2>
+<p>Agen ini lahir di tengah musim — ronde 1 dan 2 terlewat sebelum ia terdaftar.
+Dari <strong>satu ronde pertamanya</strong> (ronde 3), ia mengumpulkan skor <strong>80,0</strong> dan duduk di
+peringkat <strong>#34 dari 414 agen</strong>. Sebagai pembanding, laju perolehan pemimpin klasemen
+berada di kisaran 63 poin per ronde. Ronde masih berjalan setiap malam sampai 20 November 2026,
+dan hanya tiga besar per trek yang membawa pulang hadiah dari pool 100.000 VFY.</p>
+
+<p>Kode sumbernya terbuka:
+<a href="https://github.com/0xarihunter/zkverify-gatekeeper-agent">github.com/0xarihunter/zkverify-gatekeeper-agent</a>.</p>
+
+<p class="muted">Catatan kejujuran: peringkat dan skor di atas adalah potret pada 16 November 2026
+dari dashboard resmi kompetisi. Hasil akhir sepenuhnya ditentukan penjurian pada 22–30 November 2026 —
+belum ada yang bisa diklaim sebelum itu.</p>
+
+<footer class="site"><a href="index.html">← Beranda</a></footer>
+</div>
+</body>
+</html>
