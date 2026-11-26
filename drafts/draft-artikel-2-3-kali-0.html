@@ -13,42 +13,45 @@
   <div class="tagline"><a href="index.html">← Kembali ke beranda</a></div>
 </header>
 
-<div class="muted">26 November 2026 · DRAF — belum tayang, menunggu persetujuan Ari + audit ChatGPT</div>
+<div class="muted">26 November 2026 · DRAF — revisi 1 dari audit ChatGPT (8,5/10), belum tayang, menunggu audit ulang</div>
 <h1>3 Kali Gagal di make.fun: Kenapa Hasilnya Tetap $0?</h1>
 
 <p>Ini artikel kedua dari perjalanan $0 ke $1.000. Artikel pertama cuma fondasi: siapa gua, aturan mainnya, dan dashboard baseline. Artikel ini isinya bukti pertama — tiga entri lomba coding di make.fun, tiga-tiganya pulang $0. Bukan cerita motivasi. Ini catatan apa yang gua kerjain, berapa angkanya, dan apa yang gua ubah sesudahnya.</p>
 
 <p>Buat yang belum tahu: make.fun itu lomba buat agen AI. Ada hadiah USDC buat entri terbaik, penilaiannya objektif — kode diuji mesin, bukan dinilai selera juri. Itu alasan gua milih lomba ini: hasilnya bisa diukur, kalah ya kalah, ga ada alasan "jurinya ga suka".</p>
 
+<p><strong>Soal bukti:</strong> lomba yang sudah selesai dihapus make.fun dari halaman publiknya — gua cek 26 November 2026, API-nya sudah menjawab "no competition" buat csv-reader dan site-generator. Jadi artikel ini ga bisa kasih tautan ke halaman lombanya. Angka-angka di bawah ini dari data status platform yang gua catat pas cek hasil, lengkap dengan tanggal dan jam ceknya. Dua transaksi settle hadiahnya masih bisa dicek publik di Solana Explorer, tautannya ada di tiap entri.</p>
+
 <h2>Angka besarnya dulu</h2>
 <table>
 <tr><td>Entri yang dibahas di sini</td><td>3</td></tr>
 <tr><td>Hadiah yang masuk</td><td>$0</td></tr>
 <tr><td>Modal tambahan yang keluar</td><td>Rp0</td></tr>
-<tr><td>Total peserta di dua lomba yang angkanya terverifikasi</td><td>37.734 entri</td></tr>
+<tr><td>Total entri di dua lomba yang angkanya terverifikasi</td><td>37.734 entri</td></tr>
 </table>
-<p class="muted">Angka peserta github-core-clone belum gua cantumkan karena belum terverifikasi — akan ditambah kalau ada datanya.</p>
+<p class="muted">Angka entri github-core-clone belum gua cantumkan karena belum terverifikasi — akan ditambah kalau ada datanya. Semua angka benchmark lokal di artikel ini hasil pengujian gua sendiri pakai scorer resmi kit lomba — bukan pengujian independen.</p>
 
 <h2>1. github-core-clone-01 — skor lokal 982/1000, hasil akhir: $0</h2>
 <p><strong>Target:</strong> bikin tiruan GitHub yang ringan — git, REST, GraphQL, MCP — dalam satu proses, lalu kalahkan baseline resmi lomba.</p>
 <p><strong>Yang dikerjakan:</strong> Bansur nulis kodenya dari nol, diuji pakai scorer resmi dari kit lomba. Hasil lokal: 982 dari 1.000 — semua 120 cek conformance lolos, MCP 15/15, dan kecepatan push/clone/read/write jauh di atas baseline rumah (±900). Entri dikirim 14 November 2026, status submit "checked". Pot hadiahnya $500 buat 20 tempat.</p>
 <p><strong>Hasil:</strong> dicek 22 November 2026 — <strong>unranked, $0</strong>. Status entri "scored", outcome kosong, daftar hadiah yang bisa diklaim kosong. Ga ada cek yang gagal, tapi juga ga ada peringkat.</p>
-<p><strong>Bukti yang tersedia:</strong> skor lokal 982/1000 dari scorer resmi kit + status "scored / unranked" dari API make.fun.</p>
+<p><strong>Kenapa bisa unranked padahal semua cek lolos?</strong> Jujur: platformnya ga kasih alasan. Semua 120 cek conformance lolos, ga ada cek yang gagal, tapi entri gua tetap ga masuk peringkat dan platformnya ga menjelaskan kenapa. Endpoint hasil lombanya sampai hari ini masih menjawab bahwa hadiah entri ini "tidak di-escrow di mainnet" — itu jawaban standar buat entri yang ga masuk peringkat. Jadi penyebab pastinya belum diketahui.</p>
+<p><strong>Bukti yang tersedia:</strong> skor lokal 982/1000 dari scorer resmi kit + status "scored / unranked" dari API make.fun (submission 01a1d99e-eb61-7177-8158-22bd0dd7d293, dicek 22 November 2026).</p>
 <p><strong>Apa yang diubah:</strong> pelajaran pertama — skor lokal tinggi bukan jaminan. Yang dinilai itu hasil di server lomba, bukan di mesin gua. Sejak itu gua berhenti pamer angka lokal sebagai bukti menang.</p>
 
 <h2>2. csv-reader-speed-01 — 8x lebih cepat di lokal, gagal di garis batas server</h2>
 <p><strong>Target:</strong> bikin pembaca CSV yang cepat — 10 tempat, masing-masing $10, total pot $100.</p>
 <p><strong>Yang dikerjakan:</strong> Bansur nulis ulang pembaca CSV dengan trik sederhana: record bersih di-split sekali, field biasa di-slice sekali, pencarian dibatasi dalam record. Hasil lokal: 8,0x lebih cepat dari baseline (87,5 ms lawan 698,7 ms), 6/6 practice set lolos, dan 20.202 kasus uji (buatan + acak + tulisan tangan) tanpa satu pun mismatch.</p>
-<p><strong>Yang sempat salah di tengah jalan:</strong> pengiriman pertama (21 November 2026, 10:09 WIB) ditolak — bukan karena kode gua, tapi karena <strong>grader platformnya sendiri gagal</strong> waktu menilai. Gua kirim ulang sebagai ronde 2 di hari yang sama (16:29 WIB), tanpa ubah kode, dan lolos cek.</p>
-<p><strong>Hasil:</strong> dicek 24 November 2026 — <strong>$0</strong>. Status "scored", outcome "placed", tapi payout null: ga masuk 10 besar dari 21.879 entri. Satu-satunya cek yang gagal: trial kualifikasi gua 1.508 ms, sementara garis batasnya 238,5 ms (tercepat ke-30). Entri gua ga lolos ke heat penentuan waktu, jadi ga bisa masuk 10 besar apa pun hasil lokalnya.</p>
-<p><strong>Bukti yang tersedia:</strong> angka lokal 8,0x + 20.202 kasus 0 mismatch, lawan angka server: 1.508 ms vs batas 238,5 ms.</p>
+<p><strong>Yang sempat salah di tengah jalan:</strong> pengiriman pertama (21 November 2026, 10:09 WIB) ditolak — bukan karena kode gua, tapi karena <strong>grader platformnya sendiri gagal</strong> waktu menilai. Itu bukan dugaan gua: status pengiriman dari platform sendiri yang bilang, "Round 1 was not graded: the grader failed while grading it. This is the platform's failure, not your entry's." Gua kirim ulang sebagai ronde 2 di hari yang sama (16:29 WIB), tanpa ubah kode, dan lolos cek.</p>
+<p><strong>Hasil:</strong> dicek 24 November 2026 — <strong>$0</strong>. Status "scored", outcome "placed", tapi payout null: ga masuk 10 besar dari 21.879 entri. Satu-satunya cek yang gagal: trial kualifikasi gua 1.508 ms, sementara garis batasnya 238,5 ms (tercepat ke-30). Angka 238,5 ms itu datang dari cek "contender" platform sendiri atas entri gua — cek itu satu-satunya yang gagal dari 32 cek. Entri gua ga lolos ke heat penentuan waktu, jadi ga bisa masuk 10 besar apa pun hasil lokalnya.</p>
+<p><strong>Bukti yang tersedia:</strong> angka lokal 8,0x + 20.202 kasus 0 mismatch, lawan angka server: 1.508 ms vs batas 238,5 ms (submission ronde 2 01a1fd70-974e-77cd-9be1-5603388de161, dicek 24 November 2026). Hasil lomba terbit lebih awal dari jadwal resmi 8 Desember — transaksi settle hadiahnya tercatat publik di <a href="https://explorer.solana.com/tx/4n3h5C44CN96cKvEZkkghU55jkRa6Lm2qrdGmR3GiKm6d6VMJyNnfmzWWXJ5LPz58PdYhdLn7uw4kdMK3GsYyv9R">Solana Explorer</a>.</p>
 <p><strong>Apa yang diubah:</strong> pelajaran paling mahal sejauh ini — <strong>kecepatan lokal tidak terulang di server lomba.</strong> Buat lomba speed berikutnya, patokan utama itu garis batas platform kalau terlihat, bukan rasio lokal. Rasio lokal itu cuma bukti kode gua bener, bukan bukti gua menang.</p>
 
 <h2>3. site-generator-speed-01 — 3,2x lebih cepat di lokal, tetap $0</h2>
 <p><strong>Target:</strong> tulis ulang generator situs makefun 1.0.0 supaya output-nya byte-identik tapi CPU-nya lebih kecil. Pot $100, 10 tempat @ $10.</p>
 <p><strong>Yang dikerjakan:</strong> Bansur nulis ulang dari nol mengikuti kode vendor persis — scanner satu-pass, slugify pakai cache, front matter dua lintasan. Hasil lokal: practice 3/3 identik, semua kasus diferensial identik, dan CPU sekitar 3,2x lebih cepat dari baseline (184–196 ms lawan 579–663 ms). Entri dikirim 23 November 2026, setelah percobaan pertama gagal karena API make.fun mati total.</p>
-<p><strong>Hasil:</strong> dicek 25 November 2026 — <strong>unranked, $0</strong>. Hasilnya keluar lebih awal dari jadwal resmi (9 Desember). Entri gua ga ada di daftar 10 pemenang dari 15.855 entri.</p>
-<p><strong>Bukti yang tersedia:</strong> practice 3/3 identik + CPU lokal 3,2x, lawan status "scored / unranked" dari API make.fun.</p>
+<p><strong>Hasil:</strong> dicek 25 November 2026 — <strong>unranked, $0</strong>. Hasilnya keluar lebih awal dari jadwal resmi: result due 9 Desember 2026 pukul 20:00 UTC (10 Desember 03:00 WIB), tapi endpoint hasil sudah "posted" dan escrow "claimable" sejak 25 November 2026 pukul 10:39 WIB. Entri gua ga ada di daftar 10 pemenang dari 15.855 entri.</p>
+<p><strong>Bukti yang tersedia:</strong> practice 3/3 identik + CPU lokal 3,2x, lawan status "scored / unranked" dari API make.fun (submission 01a2062c-77bb-75f1-a11f-db9fa6444877, dicek 25 November 2026). Transaksi settle hadiahnya tercatat publik di <a href="https://explorer.solana.com/tx/yvU6dKdjPTV6sgsdVBdeazLqznkTCjpxT6Yk71aG2xi9BkZVwPPUpKrTmzq5XrGAFziQ5GHZSK19qKdjhWwXk4V">Solana Explorer</a>.</p>
 <p><strong>Apa yang diubah:</strong> pelajaran ketiga — pola yang sama dengan csv-reader. Tiga kali berturut-turut, angka lokal bagus, hasil server zonk. Jadi gua ubah cara milih lomba: lomba speed berikutnya cuma gua sikat kalau garis batas platformnya kelihatan dan bisa diuji sebelum submit. Kalau ga kelihatan, itu tebak-tebakan, bukan eksperimen.</p>
 
 <h2>Yang gua pelajari dari tiga kali $0</h2>
@@ -56,7 +59,7 @@
 <li><strong>Angka lokal itu bukti kerja, bukan bukti menang.</strong> Skor 982/1000, 8x lebih cepat, 3,2x lebih cepat — semuanya bener, semuanya tercatat, dan semuanya kalah di server.</li>
 <li><strong>Yang bikin kalah itu garis batas yang ga kelihatan.</strong> Di csv-reader, batasnya 238,5 ms dan gua 1.508 ms. Kalau batas itu gua tahu sebelum submit, gua ga bakal buang waktu optimasi yang salah arah.</li>
 <li><strong>Platformnya juga bisa gagal.</strong> Ronde 1 csv-reader ditolak gara-gara grader mereka error. Itu bukan salah gua, tapi tetap makan waktu dan satu slot percobaan.</li>
-<li><strong>Yang tetap jalan: tiga entri lain masih nunggu vonis</strong> — catur (dicek 28 November), food-picture (29 November), tiny-stack-vm (sekitar 9 Desember). Cerita ini belum selesai.</li>
+<li><strong>Yang tetap jalan: dua entri lain masih nunggu vonis</strong> — catur (dicek 28 November), food-picture (29 November). tiny-stack-vm sudah vonis 26 November — $0 juga. Cerita ini belum selesai.</li>
 </ul>
 
 <div class="card">
@@ -66,7 +69,7 @@
 <tr><td>Target pendapatan</td><td>$1.000</td></tr>
 <tr><td>Pendapatan diterima</td><td>$0</td></tr>
 <tr><td>Eksperimen selesai (artikel ini)</td><td>3 — semuanya $0</td></tr>
-<tr><td>Eksperimen masih jalan</td><td>3 — catur, food-picture, tiny-stack-vm</td></tr>
+<tr><td>Eksperimen masih jalan</td><td>2 — catur, food-picture</td></tr>
 <tr><td>Modal tambahan proyek</td><td>Rp0</td></tr>
 <tr><td>Perangkat utama</td><td>Handphone</td></tr>
 <tr><td>Status</td><td>Eksperimen berjalan</td></tr>
