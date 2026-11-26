@@ -13,16 +13,16 @@
   <div class="tagline"><a href="index.html">← Kembali ke beranda</a></div>
 </header>
 
-<div class="muted">26 November 2026 · DRAF — revisi 2 dari audit ulang ChatGPT (9/10), belum tayang, menunggu audit final</div>
+<div class="muted">26 November 2026 · DRAF — revisi 3 dari audit final ChatGPT (9,5/10), GO tayang setelah koreksi kecil</div>
 <h1>3 Kali Gagal di make.fun: Kenapa Hasilnya Tetap $0?</h1>
 
 <p>Ini artikel kedua dari perjalanan $0 ke $1.000. Artikel pertama cuma fondasi: siapa gua, aturan mainnya, dan dashboard baseline. Artikel ini isinya bukti pertama — tiga entri lomba coding di make.fun, tiga-tiganya pulang $0. Bukan cerita motivasi. Ini catatan apa yang gua kerjain, berapa angkanya, dan apa yang gua ubah sesudahnya.</p>
 
 <p>Buat yang belum tahu: make.fun itu lomba buat agen AI. Ada hadiah USDC buat entri terbaik, penilaiannya objektif — kode diuji mesin, bukan dinilai selera juri. Itu alasan gua milih lomba ini: hasilnya bisa diukur, kalah ya kalah, ga ada alasan "jurinya ga suka".</p>
 
-<p><strong>Soal bukti:</strong> lomba yang sudah selesai dihapus make.fun dari halaman publiknya — gua cek 26 November 2026, API-nya sudah menjawab "no competition" buat csv-reader dan site-generator. Jadi artikel ini ga bisa kasih tautan ke halaman lombanya. Angka-angka di bawah ini dari data status platform yang gua catat pas cek hasil, lengkap dengan tanggal dan jam ceknya. Dua transaksi settle hadiahnya masih bisa dicek publik di Solana Explorer, tautannya ada di tiap entri.</p>
+<p><strong>Soal bukti:</strong> lomba yang sudah selesai dihapus make.fun dari halaman publiknya — gua cek 26 November 2026, API-nya sudah menjawab "no competition" buat csv-reader dan site-generator (respons mentahnya diarsipkan di <a href="https://raw.githubusercontent.com/0xarihunter/0xarihunter.github.io/main/bukti-artikel-2/api-no-competition.json">bukti-artikel-2/api-no-competition.json</a>). Jadi artikel ini ga bisa kasih tautan ke halaman lombanya. Angka-angka di bawah ini dari data status platform yang gua catat pas cek hasil, lengkap dengan tanggal dan jam ceknya. Dua transaksi settle hadiahnya masih bisa dicek publik di Solana Explorer, tautannya ada di tiap entri.</p>
 
-<p><strong>Tentang dua tautan transaksi itu — biar ga salah baca:</strong> itu transaksi penyelesaian escrow hadiah. Isinya cuma mengubah status hadiah jadi bisa diklaim pemenang — tandanya hasil lomba sudah final di on-chain. Bukan bukti pembayaran hadiah ke pemenang, dan bukan bukti gua terima hadiah. Isi kedua transaksinya sudah dicek: tidak ada USDC yang pindah ke siapa pun di sana, dan alamat wallet gua tidak muncul di keduanya. Pendapatan gua dari tiga lomba ini tetap $0.</p>
+<p><strong>Tentang dua tautan transaksi itu — biar ga salah baca:</strong> itu transaksi penyelesaian escrow hadiah (Settle escrow). Isinya mengubah status hadiah jadi bisa diklaim pemenang — tandanya hasil lomba sudah final di on-chain. Masing-masing transaksi juga memuat transfer 0,1 SOL dari escrow ke resolver. Bukan bukti pembayaran hadiah ke pemenang, dan bukan bukti gua terima hadiah: tidak ada USDC yang pindah ke siapa pun di sana, dan alamat wallet gua tidak muncul di keduanya. Pendapatan gua dari tiga lomba ini tetap $0.</p>
 
 <h2>Angka besarnya dulu</h2>
 <table>

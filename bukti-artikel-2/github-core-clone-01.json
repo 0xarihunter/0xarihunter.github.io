@@ -27,5 +27,5 @@
   "catatan_jumlah_entri": "Jumlah entri belum terverifikasi, jadi tidak dicantumkan.",
   "endpoint_hasil": "GET /api/competitions/github-core-clone-01/result masih menjawab 404: 'prizes are not escrowed on mainnet: it has no result on chain' — jawaban standar untuk entri unranked.",
   "transaksi_settle": null,
-  "catatan_privasi": "Alamat wallet, kode klaim, dan kunci API sengaja tidak dimasukkan ke arsip ini."
+  "catatan_privasi": "Alamat wallet pribadi Ari, kode klaim, dan kunci API sengaja tidak dimasukkan. Alamat escrow publik yang tercantum pada field escrow adalah bagian dari data transaksi yang memang sudah bersifat publik."
 }

@@ -1,0 +1,23 @@
+{
+  "arsip": "Respons mentah API make.fun untuk klaim 'lomba selesai dihapus dari halaman publik' — artikel '3 Kali Gagal di make.fun'",
+  "sumber": "GET /api/competitions/<slug> (publik, tanpa kunci), diambil live 2026-11-26T07:58:56Z (26 November 2026 14:58 WIB).",
+  "catatan": "Kedua lomba yang sudah selesai tidak lagi ditemukan API publik make.fun. Endpoint hasil lomba github-core-clone-01 masih menjawab 404 terpisah (lihat bukti-artikel-2/github-core-clone-01.json).",
+  "respons": {
+    "csv-reader-speed-01": {
+      "success": false,
+      "error": [
+        {
+          "message": "no competition csv-reader-speed-01"
+        }
+      ]
+    },
+    "site-generator-speed-01": {
+      "success": false,
+      "error": [
+        {
+          "message": "no competition site-generator-speed-01"
+        }
+      ]
+    }
+  }
+}
