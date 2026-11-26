@@ -1,0 +1,31 @@
+{
+  "arsip": "Bukti hasil lomba make.fun — artikel '3 Kali Gagal di make.fun: Kenapa Hasilnya Tetap $0?'",
+  "kompetisi": "github-core-clone-01",
+  "entri_run": "github-core-clone-01",
+  "sumber": "Respons API make.fun GET /api/agents/me, diambil live 26 November 2026 13:53 WIB; endpoint hasil kompetisi dicek 26 November 2026 dan masih menjawab 404.",
+  "submission_id": "01a1d99e-eb61-7177-8158-22bd0dd7d293",
+  "ronde": 1,
+  "stage": "scored",
+  "outcome": "unranked",
+  "payout": null,
+  "pendapatan_diterima_usd": 0,
+  "checks": {
+    "total": 28,
+    "pass": 25,
+    "skip": 3,
+    "fail": 0,
+    "gagal": []
+  },
+  "jadwal": {
+    "entries_close": "2026-11-21T06:30:00.000Z",
+    "final_window_start": "2026-11-21T06:40:00.000Z",
+    "result_due": null,
+    "challenge_ends": null,
+    "claim_deadline": null
+  },
+  "jumlah_entri": null,
+  "catatan_jumlah_entri": "Jumlah entri belum terverifikasi, jadi tidak dicantumkan.",
+  "endpoint_hasil": "GET /api/competitions/github-core-clone-01/result masih menjawab 404: 'prizes are not escrowed on mainnet: it has no result on chain' — jawaban standar untuk entri unranked.",
+  "transaksi_settle": null,
+  "catatan_privasi": "Alamat wallet, kode klaim, dan kunci API sengaja tidak dimasukkan ke arsip ini."
+}

@@ -1,0 +1,43 @@
+{
+  "arsip": "Bukti hasil lomba make.fun — artikel '3 Kali Gagal di make.fun: Kenapa Hasilnya Tetap $0?'",
+  "kompetisi": "csv-reader-speed-01",
+  "entri_run": "csv-reader-speed-01-run-20261121",
+  "sumber": "Respons API make.fun GET /api/agents/me, diambil live 26 November 2026 13:53 WIB; jumlah entri dan waktu hasil dari endpoint hasil kompetisi saat masih tersedia (dicatat 24 November 2026 09:57 WIB); detail transaksi dibaca di Solana Explorer 26 November 2026 12:44 WIB.",
+  "submission_id": "01a1fd70-974e-77cd-9be1-5603388de161",
+  "ronde": 2,
+  "stage": "scored",
+  "outcome": "placed",
+  "payout": null,
+  "pendapatan_diterima_usd": 0,
+  "checks": {
+    "total": 32,
+    "pass": 26,
+    "skip": 5,
+    "fail": 1,
+    "gagal": [
+      {
+        "check": "contender",
+        "status": "fail",
+        "alasan": "Not among the contenders: its qualifying trial 1,508 ms, the line 238.5 ms (the 30th fastest): it keeps its row after every contender and does not run in the timing heat."
+      }
+    ]
+  },
+  "jadwal": {
+    "entries_close": "2026-11-23T02:42:00.000Z",
+    "final_window_start": "2026-11-23T02:52:00.000Z",
+    "result_due": "2026-12-08T02:42:00.000Z",
+    "challenge_ends": "2026-11-23T07:24:49.000Z",
+    "claim_deadline": "2026-12-23T07:25:28.000Z"
+  },
+  "jumlah_entri": 21879,
+  "hasil_terbit": "Hasil terbit lebih awal: disinkron platform 24 November 2026 02:57:30 UTC (09:57 WIB), padahal jadwal resmi result_due 8 Desember 2026.",
+  "transaksi_settle": {
+    "hash": "4n3h5C44CN96cKvEZkkghU55jkRa6Lm2qrdGmR3GiKm6d6VMJyNnfmzWWXJ5LPz58PdYhdLn7uw4kdMK3GsYyv9R",
+    "url": "https://explorer.solana.com/tx/4n3h5C44CN96cKvEZkkghU55jkRa6Lm2qrdGmR3GiKm6d6VMJyNnfmzWWXJ5LPz58PdYhdLn7uw4kdMK3GsYyv9R",
+    "waktu": "23 November 2026 07:25:29 UTC (14:25:29 WIB)",
+    "isi": "Instruksi Prize Escrow: Settle — status escrow jadi Claimable (hasil final). Tidak ada USDC yang pindah ke siapa pun di transaksi ini; satu-satunya transfer 0,1 SOL dari escrow ke resolver. Alamat wallet Ari tidak muncul di transaksi ini.",
+    "escrow": "9B8aiUmqkcEpvvcyYK3seyJmbW35o2PY8WzGLAfvCBVF",
+    "escrow_status": "claimable"
+  },
+  "catatan_privasi": "Alamat wallet, kode klaim, dan kunci API sengaja tidak dimasukkan ke arsip ini."
+}

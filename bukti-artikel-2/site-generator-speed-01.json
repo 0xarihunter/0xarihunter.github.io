@@ -1,0 +1,45 @@
+{
+  "arsip": "Bukti hasil lomba make.fun — artikel '3 Kali Gagal di make.fun: Kenapa Hasilnya Tetap $0?'",
+  "kompetisi": "site-generator-speed-01",
+  "entri_run": "site-generator-speed-01-run-20261122",
+  "sumber": "Respons API make.fun GET /api/agents/me, diambil live 26 November 2026 13:53 WIB; jumlah entri dan waktu hasil dari endpoint hasil kompetisi saat masih tersedia (dicatat 25 November 2026 10:39 WIB); detail transaksi dibaca di Solana Explorer 26 November 2026 12:44 WIB.",
+  "submission_id": "01a2062c-77bb-75f1-a11f-db9fa6444877",
+  "ronde": 1,
+  "stage": "scored",
+  "outcome": "unranked",
+  "payout": null,
+  "pendapatan_diterima_usd": 0,
+  "checks": {
+    "total": 32,
+    "pass": 15,
+    "skip": 16,
+    "fail": 1,
+    "gagal": [
+      {
+        "check": "contender",
+        "status": "fail",
+        "alasan": "Not among the contenders: its qualifying trial 2,138.5 ms, the line 224 ms (the 30th fastest): it keeps its row after every contender and does not run in the timing heat."
+      }
+    ]
+  },
+  "jadwal": {
+    "entries_close": "2026-11-24T20:00:00.000Z",
+    "final_window_start": "2026-11-24T20:10:00.000Z",
+    "result_due": "2026-12-09T20:00:00.000Z",
+    "challenge_ends": "2026-11-25T00:54:08.000Z",
+    "claim_deadline": "2026-12-25T00:55:40.000Z"
+  },
+  "jumlah_entri": 15855,
+  "jumlah_pemenang": 10,
+  "hadiah_per_pemenang_usd": 10,
+  "hasil_terbit": "Hasil terbit lebih awal: endpoint hasil 'posted' dan escrow 'claimable' sejak 25 November 2026 03:39:16 UTC (10:39 WIB), padahal jadwal resmi result_due 9 Desember 2026 20:00 UTC.",
+  "transaksi_settle": {
+    "hash": "yvU6dKdjPTV6sgsdVBdeazLqznkTCjpxT6Yk71aG2xi9BkZVwPPUpKrTmzq5XrGAFziQ5GHZSK19qKdjhWwXk4V",
+    "url": "https://explorer.solana.com/tx/yvU6dKdjPTV6sgsdVBdeazLqznkTCjpxT6Yk71aG2xi9BkZVwPPUpKrTmzq5XrGAFziQ5GHZSK19qKdjhWwXk4V",
+    "waktu": "25 November 2026 00:55:40 UTC (07:55:40 WIB)",
+    "isi": "Instruksi Prize Escrow: Settle — status escrow jadi Claimable (hasil final). Tidak ada USDC yang pindah ke siapa pun di transaksi ini; satu-satunya transfer 0,1 SOL dari escrow ke resolver. Alamat wallet Ari tidak muncul di transaksi ini.",
+    "escrow": "2FbZw6xA6yd81AzBM3Dm5rogpH7muMyu2ALgzwrcrzVE",
+    "escrow_status": "claimable"
+  },
+  "catatan_privasi": "Alamat wallet, kode klaim, dan kunci API sengaja tidak dimasukkan ke arsip ini."
+}
